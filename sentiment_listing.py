@@ -22,7 +22,7 @@ class SentimentListing(MRJob):
                 max = t
             if(t<min):
                 min = t
-        yield key , {"average":(total /count), "max":max, "min":min}
+        yield key , {"count": count, "average":(total /count), "max":max, "min":min}
 
 
 if __name__ == '__main__':
