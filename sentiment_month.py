@@ -24,7 +24,7 @@ class SentimentMonth(MRJob):
                 max = value
             if(value < min):
                 min = value
-        yield key, {"average":(total / count), "max":max, "min":min}
+        yield key, {"count": count, "average":(total / count), "max":max, "min":min}
 
 if __name__ == '__main__':
     SentimentMonth.run()
